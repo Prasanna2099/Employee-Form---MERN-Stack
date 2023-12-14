@@ -24,7 +24,7 @@ function Home() {
   const fetchEmployees = () => {
     axios
       .get(
-        "http://employee-form-mern-stack-production.up.railway.app/employees"
+        "https://employee-form-mern-stack-production.up.railway.app/employees"
       )
       .then((res) => {
         setEmployees(res.data);
@@ -37,7 +37,7 @@ function Home() {
     event.preventDefault();
     axios
       .post(
-        "http://employee-form-mern-stack-production.up.railway.app/create",
+        "https://employee-form-mern-stack-production.up.railway.app/create",
         { name, age, department, designation, salary, address }
       )
       .then(() => {
@@ -59,7 +59,7 @@ function Home() {
   const updateName = (id) => {
     axios
       .put(
-        "http://employee-form-mern-stack-production.up.railway.app/employees/name",
+        "https://employee-form-mern-stack-production.up.railway.app/employees/name",
         { name: newname, id: id }
       )
       .then(() => {
@@ -75,7 +75,7 @@ function Home() {
   const updateAge = (id) => {
     axios
       .put(
-        "http://employee-form-mern-stack-production.up.railway.app/employees/age",
+        "https://employee-form-mern-stack-production.up.railway.app/employees/age",
         { age: newAge, id: id }
       )
       .then(() => {
@@ -91,7 +91,7 @@ function Home() {
   const updateDepartment = (id) => {
     axios
       .put(
-        "http://employee-form-mern-stack-production.up.railway.app/employees/department",
+        "https://employee-form-mern-stack-production.up.railway.app/employees/department",
         { department: newDepartment, id: id }
       )
       .then(() => {
@@ -107,7 +107,7 @@ function Home() {
   const updateDesignation = (id) => {
     axios
       .put(
-        "http://employee-form-mern-stack-production.up.railway.app/employees/designation",
+        "https://employee-form-mern-stack-production.up.railway.app/employees/designation",
         { designation: newDesignation, id: id }
       )
       .then(() => {
@@ -123,7 +123,7 @@ function Home() {
   const updateSalary = (id) => {
     axios
       .put(
-        "http://employee-form-mern-stack-production.up.railway.app/employees/salary",
+        "https://employee-form-mern-stack-production.up.railway.app/employees/salary",
         { salary: newSalary, id: id }
       )
       .then(() => {
@@ -139,7 +139,7 @@ function Home() {
   const updateAddress = (id) => {
     axios
       .put(
-        "http://employee-form-mern-stack-production.up.railway.app/employees/address",
+        "https://employee-form-mern-stack-production.up.railway.app/employees/address",
         { address: newAddress, id: id }
       )
       .then(() => {
@@ -155,7 +155,7 @@ function Home() {
   const handleDelete = (id) => {
     axios
       .delete(
-        `http://employee-form-mern-stack-production.up.railway.app/employees/${id}`
+        `https://employee-form-mern-stack-production.up.railway.app/employees/${id}`
       )
       .then(() => {
         console.log("Employee deleted");
